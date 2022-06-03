@@ -1,0 +1,46 @@
+
+
+/*********************************/
+/*****Author: Nabeyou Tadessa*****/
+/*******Computer Engineering******/
+/*********************************/
+
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int c = 0;
+    int high = 100;
+    int low = 0;
+    int guess = 50;
+    int x = 1;
+    int n;
+    
+    cout << "I can guess your number in 7 or less tries!" <<endl;
+    cout << "Enter a number between 1 and 100:" <<endl;
+    cin >> n;
+    
+    while (x != 0) {
+        c += 1;
+        if (guess == n) {
+            cout << "Haha! I guessed your number" <<endl;
+            cout << "It took me " << c << " tries." <<endl;
+            x=0;
+        }
+        if (guess > n) {
+            high = guess;
+            guess = (high + low) / 2;
+            cout << "New high is " << high << endl;
+            cout << "New guess is " << guess << endl;
+        }
+        if (guess < n) {
+            low = guess;
+            guess = (high + low) / 2;
+            cout << "New low is " << low << endl;
+            cout << "New guess is " << guess << endl;
+        }
+    }
+    return 0;
+}
