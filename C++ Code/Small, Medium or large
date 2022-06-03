@@ -1,0 +1,80 @@
+
+
+/*********************************/
+/*****Author: Nabeyou Tadessa*****/
+/*******Computer Engineering******/
+/*********************************/
+
+
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int a;
+    int b;
+    int c;
+    
+    cout << "Enter three numbers and this program will tell you the smallest, medium, and largest." << endl;
+    cout << "Enter the first number: " << endl;
+    cin >> a;
+    cout << "Enter the second number: " << endl;
+    cin >> b;
+    cout << "Enter the third number: " << endl;
+    cin >> c;
+    if (a > b && a > c) {
+        cout << a << " is large." << endl;
+        if (b > c) {
+            cout << b << " is medium." << endl;
+            cout << c << " is small." << endl;
+        } else {
+            if (b < c) {
+                cout << c << " is medium." << endl;
+                cout << b << " is small." << endl;
+            } else {
+                if (b == c) {
+                    cout << c << " is equal to " << b << endl;
+                }
+            }
+        }
+    } else {
+        if (b > a && b > c) {
+            cout << b << " is large." << endl;
+            if (a > c) {
+                cout << a << " is medium." << endl;
+                cout << c << " is small." << endl;
+            } else {
+                if (c > a) {
+                    cout << c << " is medium." << endl;
+                    cout << a << " is small." << endl;
+                } else {
+                    if (a == c) {
+                        cout << c << " is equal to " << a << endl;
+                    }
+                }
+            }
+        } else {
+            if (c > b && c > a) {
+                cout << c << " is large." << endl;
+                if (a > b) {
+                    cout << a << " is medium." << endl;
+                    cout << b << " is small." << endl;
+                } else {
+                    if (b > a) {
+                        cout << b << " is medium." << endl;
+                        cout << a << " is small." << endl;
+                    } else {
+                        if (b == a) {
+                            cout << a << " is equal to " << b << endl;
+                        }
+                    }
+                }
+            } else {
+                if (a == b && b == c) {
+                    cout << "They are all equal." << endl;
+                }
+            }
+        }
+    }
+    return 0;
+}
