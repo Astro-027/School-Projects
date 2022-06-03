@@ -1,2 +1,2 @@
 # School-Projects
-Some of the projects I made during my College years
+Some of the projects I made during my School years
